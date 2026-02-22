@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Organigram – Property Cost Intelligence Tool</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOADING OVERLAY -->
+<div id="loader">
+    <div class="spinner-border text-light"></div>
+    <p>Analyzing Property Data...</p>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+  <div class="container">
+    <div class="d-flex align-items-center">
+      <img src="./Assests/Image/uniliv_LOGO-removebg-preview.png" height="45">
+      <span class="fw-bold ms-2">Organogram</span>
+    </div>
+    <button class="btn btn-sm btn-outline-light" onclick="toggleDarkMode()">🌙</button>
+  </div>
+</nav>
+
+<!-- WELCOME -->
+<div id="welcomeScreen" class="welcome-screen">
+    <div class="text-center">
+        <img src="./Assests/Image/uniliv_LOGO-removebg-preview.png" class="welcome-logo">
+        <h1>Welcome to UNILIV</h1>
+        <p>Property Cost Intelligence Tool</p>
+    </div>
+</div>
+
+<div class="container main-container">
+
+<!-- INPUT -->
+<div class="card glass-card p-4 mb-5">
+    <h4 class="text-center mb-4">Enter Property Details</h4>
+    <div class="row g-3">
+        <div class="col-lg-4 col-md-6">
+            <input type="number" id="bedsInput" class="form-control" placeholder="Beds">
+        </div>
+        <div class="col-lg-4 col-md-6">
+            <input type="number" id="roomsInput" class="form-control" placeholder="Rooms">
+        </div>
+        <div class="col-lg-4 col-md-12">
+            <input type="number" id="areaInput" class="form-control" placeholder="Area (Sq Ft)">
+        </div>
+        <div class="col-12 form-check form-switch mt-2">
+            <input class="form-check-input" type="checkbox" id="foodToggle" checked>
+            <label class="form-check-label">Include Food</label>
+        </div>
+        <div class="col-12 d-grid">
+            <button class="btn btn-primary btn-lg" onclick="generateCostBreakdown()">Generate Analysis</button>
+        </div>
+    </div>
+</div>
+
+<div id="output"></div>
+
+</div>
+
+<footer class="text-center py-4 text-muted">
+© 2026 UNILIV – Property Cost Intelligence
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f6fb;
+    transition: 0.4s ease;
+}
+
+.main-container {
+    margin-top: 120px;
+}
+
+.navbar {
+    background: linear-gradient(90deg, #6F557F, #8B5CF6);
+    color: white;
+}
+
+.glass-card {
+    backdrop-filter: blur(15px);
+    background: rgba(255,255,255,0.7);
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+}
+
+.card {
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.welcome-screen {
+    position: fixed;
+    inset: 0;
+    background: #6F557F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 9999;
+    animation: fadeOut 3s forwards;
+}
+
+@keyframes fadeOut {
+    0%,80% {opacity:1;}
+    100% {opacity:0; visibility:hidden;}
+}
+
+.welcome-logo {
+    height: 90px;
+    margin-bottom: 20px;
+}
+
+#loader {
+    position: fixed;
+    inset: 0;
+    background: #6F557F;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 9998;
+    display: none;
+}
+
+.analytics-section {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 25px;
+    margin-top: 40px;
+}
+
+canvas {
+    background: white;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+/* DARK MODE */
+
+.dark-mode {
+    background: #121212;
+    color: white;
+}
+
+.dark-mode .card,
+.dark-mode .glass-card,
+.dark-mode .analytics-section {
+    background: #1e1e1e;
+    color: white;
+}
+
+.dark-mode canvas {
+    background: #1e1e1e;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:992px){
+    .main-container{margin-top:140px;}
+}
+
+@media(max-width:768px){
+    .card{margin-bottom:20px;}
+}
+
+@media(max-width:576px){
+    h4{font-size:18px;}
+}
+
+.chart-card {
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chart-card canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.card {
+  border-radius: 14px;
+}
